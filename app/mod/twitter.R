@@ -85,4 +85,4 @@ get_access_token <-
   }
 
 
-url <- get_authorization_url(app, "http://projectdataliteracy.net")
+url <- get_authorization_url(app, "https://projectdataliteracy.net")
