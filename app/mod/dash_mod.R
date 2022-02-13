@@ -126,8 +126,7 @@ dashTweet <- function(input, output, session,user_token,keys,pos.words,neg.words
     },
     content = function(file) {
       #write.csv(data(), file)
-      write.xlsx(data(), file, sheetName="Sheet1",
-                 col.names=TRUE, row.names=FALSE, append=FALSE, showNA=TRUE)
+      write_xlsx(data(), file)
     }
   )
   #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -376,7 +375,7 @@ dashTweet <- function(input, output, session,user_token,keys,pos.words,neg.words
                                                zoom = TRUE, # ability to zoom when click on the node
                                                opacityNoHover = 0.1, # opacity of labels when static
                                                linkColour = edges_col1, # edge colors
-                                               bounded=TRUE, #boundedin border
+                                               bounded=FALSE, #boundedin border
                                                arrows = TRUE) #directed
       # Plot network
       D3_network_RT 
@@ -482,7 +481,7 @@ dashTweet <- function(input, output, session,user_token,keys,pos.words,neg.words
                                              zoom = TRUE, # ability to zoom when click on the node
                                              opacityNoHover = 0.1, # opacity of labels when static
                                              linkColour = edges_col2, # edge colors
-                                             bounded=TRUE, #boundedin border
+                                             bounded=FALSE, #boundedin border
                                              arrows = TRUE) #directed
     # Plot network
     D3_network_MN 
@@ -936,8 +935,7 @@ dashTweet <- function(input, output, session,user_token,keys,pos.words,neg.words
       #add betweeness and membership to the nodeList1
       nodeList1 <- cbind(nodeList1,members= as.numeric(memb1), nodeBetweenness=100*betAll1.norm) # We are scaling the value by multiplying it by 100 for visualization purposes only (to create larger nodes)
       rm(betAll1, betAll1.norm, memb1)
-      write.xlsx(nodeList1, file, sheetName="Sheet1",
-                 col.names=TRUE, row.names=FALSE, append=FALSE, showNA=TRUE)
+      write_xlsx(nodeList1, file)
     }
   )
   #################################
@@ -1013,8 +1011,7 @@ dashTweet <- function(input, output, session,user_token,keys,pos.words,neg.words
       #add betweeness and membership to the nodeList2
       nodeList2 <- cbind(nodeList2,members= as.numeric(memb2), nodeBetweenness=100*betAll2.norm) # We are scaling the value by multiplying it by 100 for visualization purposes only (to create larger nodes)
       rm(betAll2, betAll2.norm, memb2)
-      write.xlsx(nodeList2, file, sheetName="Sheet1",
-                 col.names=TRUE, row.names=FALSE, append=FALSE, showNA=TRUE)
+      write_xlsx(nodeList2, file)
     }
   )
   #################################

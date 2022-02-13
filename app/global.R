@@ -1,6 +1,7 @@
 library(renv)
 library(shiny)
 library(shinyWidgets)
+library(writexl)
 library(rtweet)
 library(twitteR)
 library(DT)
@@ -15,7 +16,7 @@ library(ggthemes)
 library(stringr)
 library(tm)
 library(igraph)
-
+library(plyr)
 library(bs4Dash)
 
 source("mod/twitter.R")
@@ -25,7 +26,7 @@ source("mod/bs4elem.R")
 
 ###------------Global-----------------------#
 pos.words <- scan('data/pos.wordsAr5.txt', sep = "\n", what='character',encoding = 'UTF-8')
-neg.words <- scan('data/neg.wordsAr5.txt', sep = "\n", what='character',encoding = 'UTF-8')
+# neg.words <- scan('data/neg.wordsAr5.txt', sep = "\n", what='character',encoding = 'UTF-8')
 stop.wordsAr <- scan('data/stop.wordsAr.txt', sep = "\n", what='character',encoding = 'UTF-8')
 
 
