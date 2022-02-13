@@ -758,14 +758,6 @@
         "rlang"
       ]
     },
-    "rJava": {
-      "Package": "rJava",
-      "Version": "1.0-6",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "0415819f6baa75d86d52483f7292b623",
-      "Requirements": []
-    },
     "rappdirs": {
       "Package": "rappdirs",
       "Version": "0.3.3",
@@ -1065,26 +1057,13 @@
       "Hash": "a376b424c4817cda4920bbbeb3364e85",
       "Requirements": []
     },
-    "xlsx": {
-      "Package": "xlsx",
-      "Version": "0.6.5",
+    "writexl": {
+      "Package": "writexl",
+      "Version": "1.4.0",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "d24d579f59a3b6da1e1cf4660425443e",
-      "Requirements": [
-        "rJava",
-        "xlsxjars"
-      ]
-    },
-    "xlsxjars": {
-      "Package": "xlsxjars",
-      "Version": "0.6.1",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "4c4b3bc29a916f33f1298dd951133351",
-      "Requirements": [
-        "rJava"
-      ]
+      "Hash": "edd181b6e10c87497db16d1f8c0d4ed5",
+      "Requirements": []
     },
     "xml2": {
       "Package": "xml2",
