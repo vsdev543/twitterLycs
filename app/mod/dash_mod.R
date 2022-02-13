@@ -376,7 +376,7 @@ dashTweet <- function(input, output, session,user_token,keys,pos.words,neg.words
                                                zoom = TRUE, # ability to zoom when click on the node
                                                opacityNoHover = 0.1, # opacity of labels when static
                                                linkColour = edges_col1, # edge colors
-                                               bounded=TRUE, #boundedin border
+                                               bounded=FALSE, #boundedin border
                                                arrows = TRUE) #directed
       # Plot network
       D3_network_RT 
@@ -482,7 +482,7 @@ dashTweet <- function(input, output, session,user_token,keys,pos.words,neg.words
                                              zoom = TRUE, # ability to zoom when click on the node
                                              opacityNoHover = 0.1, # opacity of labels when static
                                              linkColour = edges_col2, # edge colors
-                                             bounded=TRUE, #boundedin border
+                                             bounded=FALSE, #boundedin border
                                              arrows = TRUE) #directed
     # Plot network
     D3_network_MN 
