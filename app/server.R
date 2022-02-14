@@ -37,7 +37,7 @@ observe({
     if (is.null(user_token())) {
       
       output$main <- renderUI({
-        url <- get_authorization_url(app, "https://projectdataliteracy.net")
+        url <- get_authorization_url(app, "http://127.0.0.1:8080/")
         twitAuth_UI('lv0', url = url)
       })
       

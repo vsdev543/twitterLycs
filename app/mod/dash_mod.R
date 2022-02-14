@@ -495,9 +495,9 @@ dashTweet <- function(input, output, session,user_token,keys,pos.words,neg.words
     },
     content = function(file) {
       rtData <- data()
-      sp = split(rtData, rtData$isRetweet)
+      sp = split(rtData, rtData$is_retweet)
       rt = mutate(sp[['TRUE']], sender = substr(text, 5, regexpr(':', text) - 1))
-      el = as.data.frame(cbind(sender = tolower(rt$sender), receiver = tolower(rt$screenName)))
+      el = as.data.frame(cbind(sender = tolower(rt$sender), receiver = tolower(rt$screen_name)))
       el = dplyr::count(el, sender, receiver,sort = TRUE)
       
       
@@ -520,7 +520,7 @@ dashTweet <- function(input, output, session,user_token,keys,pos.words,neg.words
     },
     content = function(file) {
       mentionData <- data()
-      sp2 = split(mentionData, mentionData$isRetweet)
+      sp2 = split(mentionData, mentionData$is_retweet)
       orig = sp2[['FALSE']]
       
       mentioned = 
@@ -535,7 +535,7 @@ dashTweet <- function(input, output, session,user_token,keys,pos.words,neg.words
           if(mentioned[[i]] == '')  
             return(NULL)
           lapply(mentioned[[i]], function(m)
-            c(sender = as.character(orig$screenName[i]), receiver = m)) %>%
+            c(sender = as.character(orig$screen_name[i]), receiver = m)) %>%
             do.call(rbind, .) %>% as.data.frame()
         }) %>% 
         do.call(rbind, .) %>%
